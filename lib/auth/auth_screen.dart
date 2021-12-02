@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ipanda/auth/signup_screen.dart';
+
+import 'login_screen.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({Key? key}) : super(key: key);
@@ -54,15 +57,16 @@ class _AuthScreenState extends State<AuthScreen> {
           ),
           body: Container(
             decoration: const BoxDecoration(
-              gradient: const LinearGradient(
+              gradient:  LinearGradient(
                   colors: [
                     Colors.amber,
                     Colors.cyan,
                   ])
             ),
-            child: TabBarView(
+            child: const TabBarView(
               children: [
-                
+                LoginScreen(),
+                SignUp(),
               ],
             ),
           ),
